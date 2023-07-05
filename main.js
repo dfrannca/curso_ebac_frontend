@@ -1,56 +1,60 @@
-const form = document.getElementById('form-deposito');
-const numeroB = document.getElementById('numero-B');
+const form = document.getElementById('form-numeros');
+const numeroA = document.getElementById('numero-a');
+const numeroB = document.getElementById('numero-b');
 let formEValido = false;
 
-function numeroMaior(validacaoNum) {
-  const numeroVali = validacaoNum.split(' ');
-  return numeroVali.length > numeroA;
+function validaNumeros(numeroA, numeroB) {
+    return parseInt(numeroB) > parseInt(numeroA);
 }
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const numeroA = document.getElementById('numero-A');
-  const numeroB = document.getElementById('numero-B');
-  const mensagemSucesso = `O número B: <b>${numeroB.value}</b> é maior que o número A: <b>${numeroA.value}</b>`;
+    const mensagemSucesso = `O número <b>${numeroB.value}</b> é maior que o número <b>${numeroA.value}</b>.`;
 
-  formEValido = numeroMaior(numeroB.value);
+    formEValido = validaNumeros(numeroA.value, numeroB.value);
 
-  if (formEValido) {
+    if (formEValido) {
+        const containerMensagemSucesso = document.querySelector('.success-message');
+        containerMensagemSucesso.innerHTML = mensagemSucesso;
+        containerMensagemSucesso.style.display = 'block';
 
-    const containerMensagemSucesso = document.querySelector('.sucess-message');
+        numeroA.value = '';
+        numeroB.value = '';
+    } else {
+        numeroA.style.border = '1px solid red';
+        numeroB.style.border = '1px solid red';
+        document.querySelector('.error-message').style.display = 'block';
+    }
+});
 
-    containerMensagemSucesso.innerHTML = mensagemSucesso;
-
-    containerMensagemSucesso.style.display = 'block';
-
-    numeroA.value = '';
-    numeroB.value = '';
-
-  } else {
-    numeroB.style.border = '1px solid red';
-    document.querySelector('.error-message').style.display = 'block';
-  }
-
-})
+numeroA.addEventListener('keyup', function (e) {
+    formEValido = validaNumeros(numeroA.value, numeroB.value);
+    if (!formEValido) {
+        numeroA.classList.add('error');
+        numeroB.classList.add('error');
+        document.querySelector('.error-message').style.display = 'block';
+    } else {
+        numeroA.classList.remove('error');
+        numeroB.classList.remove('error');
+        numeroA.style.border = '';
+        numeroB.style.border = '';
+        document.querySelector('.error-message').style.display = 'none';
+    }
+});
 
 numeroB.addEventListener('keyup', function (e) {
+    formEValido = validaNumeros(numeroA.value, numeroB.value);
+    if (!formEValido) {
+        numeroA.classList.add('error');
+        numeroB.classList.add('error');
+        document.querySelector('.error-message').style.display = 'block';
+    } else {
+        numeroA.classList.remove('error');
+        numeroB.classList.remove('error');
+        numeroA.style.border = '';
+        numeroB.style.border = '';
+        document.querySelector('.error-message').style.display = 'none';
+    }
+});
 
-  console.log(e.target.value);
-  formEValido = numeroMaior(e.target.value);
-
-  if (!formEValido) {
-
-    numeroB.classList.add('error');
-    document.querySelector('.error-message').style.display = 'block';
-
-  }
-  else {
-    numeroB.classList.remove('error');
-    numeroB.style = '';
-    document.querySelector('.error-message').style.display = 'none';
-
-  }
-
-
-})
