@@ -1,0 +1,62 @@
+body {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: black;
+  font-family: 'Russo One', sans-serif;
+  margin: 0;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Russo One', sans-serif;
+}
+
+button:hover {
+  background-color: darkorange;
+}
+
+h2 {
+  font-family: 'Russo One', sans-serif;
+}
+
+.tarefa-concluida {
+  text-decoration: line-through;
+}
+
+#listaTarefas {
+  font-family: 'Russo One', sans-serif;
+  cursor: pointer;
+}
