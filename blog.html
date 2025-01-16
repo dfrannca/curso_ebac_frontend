@@ -3,91 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Últimas Postagens</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #1C54A8;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .blog-container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .post {
-            display: flex;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-bottom: 1px solid #ccc;
-        }
-        .post img {
-            max-width: 150px;
-            border-radius: 8px;
-            margin-right: 20px;
-        }
-        .post h2 {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-        }
-        .post p {
-            margin: 5px 0 0;
-            color: #555;
-            font-size: 14px;
-        }
-        .read-more {
-            margin-top: 10px;
-            display: inline-block;
-            color: #1C54A8;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .read-more:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Email - Últimas Postagens</title>
 </head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Blog</h1>
-        <p>Confira as últimas postagens</p>
-    </header>
-    <div class="blog-container">
-        <div class="post">
-            <img src="https://media.istockphoto.com/id/2156446959/pt/foto/casual-woman-in-a-black-blazer.jpg?s=2048x2048&w=is&k=20&c=3ZFJzoJXj7KBgPXEI0dR9xH8J1hMeBrqBPtgA8m49zg=" alt="Estilo de vida e moda">
-            <div>
-                <h2>Estilo de vida e moda para 2025</h2>
-                <p>Descubra as tendências mais recentes no mundo da moda e como adaptar seu estilo pessoal para o ano novo...</p>
-                <a href="#" class="read-more">Leia mais</a>
-            </div>
-        </div>
-        <div class="post">
-            <img src="https://media.istockphoto.com/id/2162645329/pt/foto/teamwork-meeting-and-ideas-for-solution-or-decision-for-business-workplace-or-company-group.jpg?s=2048x2048&w=is&k=20&c=dWYAMxt8azvE-hIXkPpQm4MuUk3vAYM5MRoJFTGfBAY=" alt="Produtividade no trabalho">
-            <div>
-                <h2>Como melhorar sua produtividade no trabalho</h2>
-                <p>Confira dicas valiosas para aumentar sua eficiência e alcançar mais resultados em menos tempo...</p>
-                <a href="#" class="read-more">Leia mais</a>
-            </div>
-        </div>
-        <div class="post">
-            <img src="https://media.istockphoto.com/id/1313901506/pt/foto/cropped-shot-of-an-african-american-young-woman-using-smart-phone-at-home-smiling-african.jpg?s=2048x2048&w=is&k=20&c=EVnl4JaDK7SOk65ruaa-LfRBsrGHpUhmlnWptewon44=" alt="Fotografia criativa">
-            <div>
-                <h2>Fotografia criativa com seu smartphone</h2>
-                <p>Aprenda a capturar fotos incríveis com técnicas simples usando apenas o seu celular...</p>
-                <a href="#" class="read-more">Leia mais</a>
-            </div>
-        </div>
-    </div>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333;">
+
+    <!-- Header -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1C54A8; text-align: center; color: white;">
+        <tr>
+            <td style="padding: 20px;">
+                <h1 style="margin: 0; font-size: 24px;">Bem-vindo ao Blog</h1>
+                <p style="margin: 0; font-size: 16px;">Confira as últimas postagens</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Blog Container -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; margin: 20px auto; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <!-- Post 1 -->
+        <tr>
+            <td style="padding: 20px; border-bottom: 1px solid #ccc;">
+                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; display: flex;">
+                    <tr>
+                        <td style="width: 150px; vertical-align: top;">
+                            <img src="https://media.istockphoto.com/id/2156446959/pt/foto/casual-woman-in-a-black-blazer.jpg?s=2048x2048&w=is&k=20&c=3ZFJzoJXj7KBgPXEI0dR9xH8J1hMeBrqBPtgA8m49zg=" alt="Estilo de vida e moda" style="max-width: 150px; border-radius: 8px;">
+                        </td>
+                        <td style="padding-left: 15px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #333;">Estilo de vida e moda para 2025</h2>
+                            <p style="margin: 5px 0 10px; color: #555; font-size: 14px;">Descubra as tendências mais recentes no mundo da moda e como adaptar seu estilo pessoal para o ano novo...</p>
+                            <a href="#" style="color: #1C54A8; text-decoration: none; font-size: 14px;">Leia mais</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Post 2 -->
+        <tr>
+            <td style="padding: 20px; border-bottom: 1px solid #ccc;">
+                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; display: flex;">
+                    <tr>
+                        <td style="width: 150px; vertical-align: top;">
+                            <img src="https://media.istockphoto.com/id/2162645329/pt/foto/teamwork-meeting-and-ideas-for-solution-or-decision-for-business-workplace-or-company-group.jpg?s=2048x2048&w=is&k=20&c=dWYAMxt8azvE-hIXkPpQm4MuUk3vAYM5MRoJFTGfBAY=" alt="Produtividade no trabalho" style="max-width: 150px; border-radius: 8px;">
+                        </td>
+                        <td style="padding-left: 15px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #333;">Como melhorar sua produtividade no trabalho</h2>
+                            <p style="margin: 5px 0 10px; color: #555; font-size: 14px;">Confira dicas valiosas para aumentar sua eficiência e alcançar mais resultados em menos tempo...</p>
+                            <a href="#" style="color: #1C54A8; text-decoration: none; font-size: 14px;">Leia mais</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Post 3 -->
+        <tr>
+            <td style="padding: 20px;">
+                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; display: flex;">
+                    <tr>
+                        <td style="width: 150px; vertical-align: top;">
+                            <img src="https://media.istockphoto.com/id/1313901506/pt/foto/cropped-shot-of-an-african-american-young-woman-using-smart-phone-at-home-smiling-african.jpg?s=2048x2048&w=is&k=20&c=EVnl4JaDK7SOk65ruaa-LfRBsrGHpUhmlnWptewon44=" alt="Fotografia criativa" style="max-width: 150px; border-radius: 8px;">
+                        </td>
+                        <td style="padding-left: 15px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #333;">Fotografia criativa com seu smartphone</h2>
+                            <p style="margin: 5px 0 10px; color: #555; font-size: 14px;">Aprenda a capturar fotos incríveis com técnicas simples usando apenas o seu celular...</p>
+                            <a href="#" style="color: #1C54A8; text-decoration: none; font-size: 14px;">Leia mais</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
